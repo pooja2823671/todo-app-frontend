@@ -1,7 +1,7 @@
 import { callGetAllAPI, callUpdateAPI } from "./BackendAPI";
 
 function DoneTodoPage(props) {
-    let todoArr = props.todo;
+    let todoArr = props.todo || []; 
     console.log(JSON.stringify(todoArr))
 
     async function handleClick(e, todoId) {
@@ -17,13 +17,13 @@ function DoneTodoPage(props) {
         }
 
     return (
-        <div class="max-w-md mx-auto bg-white py-10 rounded-lg mt-6">
-            <table class="w-full table-auto border border-gray-300 shadow-md rounded-lg">
-                <thead class="bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 py-6 text-center shadow-md rounded-md">
+        <div className="max-w-md mx-auto bg-white py-10 rounded-lg mt-6">
+            <table className="w-full table-auto border border-gray-300 shadow-md rounded-lg">
+                <thead className="bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 py-6 text-center shadow-md rounded-md">
                     <tr>
-                        <th class="px-4 py-2 text-left">Completed Todo Title</th>
-                        <th class="px-4 py-2 text-left">Completed On</th>
-                        <th class="px-4 py-2 text-left">Undo</th>
+                        <th className="px-4 py-2 text-left">Completed Todo Title</th>
+                        <th className="px-4 py-2 text-left">Completed On</th>
+                        <th className="px-4 py-2 text-left">Undo</th>
                     </tr>
                 </thead>
 
